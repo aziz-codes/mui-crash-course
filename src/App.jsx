@@ -1,7 +1,22 @@
-import React from "react";
-
+import { Button } from "@mui/material";
+// import { Settings } from "@mui/icons-material/";
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <Button
+        variant="contained"
+        size="small"
+        sx={{
+          backgroundColor: "red",
+          "&:hover": {
+            backgroundColor: "orange",
+          },
+        }}
+      >
+        Click ME
+      </Button>
+    </>
+  );
 };
 
 export default App;
