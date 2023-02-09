@@ -27,12 +27,25 @@ const Navbar = () => {
     borderRadius: "5px",
     width: "40%",
   });
-  const Icons = styled(Box)({
-    display: "flex",
+  const Icons = styled(Box)(({ theme }) => ({
+    display: "none",
     flexDirection: "row",
     gap: "10px",
     alignItems: "center",
-  });
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+    },
+  }));
+
+  const UserBox = styled(Box)(({ theme }) => ({
+    display: "flex",
+    alignItems: "center",
+    gap: "5px",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  }));
+
   return (
     <AppBar
       position="sticky"
@@ -64,6 +77,10 @@ const Navbar = () => {
           </IconButton>
           <Avatar sx={{ width: "30px", height: "30px" }} src={imageSrc} />
         </Icons>
+        <UserBox>
+          <Avatar sx={{ width: "30px", height: "30px" }} src={imageSrc} />
+          <Typography variant="p">John</Typography>
+        </UserBox>
       </StyleToolbar>
     </AppBar>
   );
