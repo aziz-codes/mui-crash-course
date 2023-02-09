@@ -9,10 +9,13 @@ import {
   Badge,
   Avatar,
   IconButton,
+  Menu,
+  MenuItem,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   const imageSrc =
     "https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=600";
   const StyleToolbar = styled(Toolbar)({
@@ -75,13 +78,44 @@ const Navbar = () => {
               <Notifications color="white" />
             </Badge>
           </IconButton>
-          <Avatar sx={{ width: "30px", height: "30px" }} src={imageSrc} />
+          <Avatar
+            sx={{ width: "25px", height: "25px" }}
+            src={imageSrc}
+            onClick={() => {
+              setOpen(true);
+            }}
+          />
         </Icons>
-        <UserBox>
-          <Avatar sx={{ width: "30px", height: "30px" }} src={imageSrc} />
+        <UserBox
+          onClick={() => {
+            setOpen(true);
+          }}
+        >
+          <Avatar sx={{ width: "25px", height: "25px" }} src={imageSrc} />
           <Typography variant="p">John</Typography>
         </UserBox>
       </StyleToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        // anchorEl={anchorEl}
+        open={open}
+        onClose={() => {
+          setOpen(false);
+        }}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
