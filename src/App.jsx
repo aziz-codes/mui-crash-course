@@ -1,12 +1,19 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Feed from "./components/Feed";
+import Navbar from "./components/Navbar";
 import Rightbar from "./components/Rightbar";
 import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
     <Box>
-      <Stack direction="row" spacing={2} justifyContent="space-between">
+      <Navbar />
+      <Stack
+        direction="row"
+        spacing={2}
+        justifyContent="space-between"
+        pt={0.1}
+      >
         <Sidebar />
         <Feed />
         <Rightbar />

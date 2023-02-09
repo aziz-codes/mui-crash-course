@@ -5,6 +5,8 @@ const Sidebar = () => {
     <Box
       bgcolor="skyblue"
       flex={1}
+      flexShrink="unset"
+      maxWidth="350px"
       p={2}
       sx={{ display: { xs: "none", sm: "block" } }}
     >
