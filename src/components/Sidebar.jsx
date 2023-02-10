@@ -16,6 +16,7 @@ import {
   People,
   Person,
   Settings,
+  LightMode,
 } from "@mui/icons-material";
 const Sidebar = ({ mode, setMode }) => {
   return (
@@ -85,11 +86,11 @@ const Sidebar = ({ mode, setMode }) => {
           <ListItem disablePadding>
             <ListItemButton LinkComponent="a" href="#">
               <ListItemIcon>
-                <ModeNight />
+                {mode === "dark" ? <LightMode /> : <ModeNight />}
               </ListItemIcon>
               <Switch
                 onChange={() => {
-                  mode === "light" ? "dark" : "light";
+                  mode === "light" ? setMode("dark") : setMode("light");
                 }}
               />
             </ListItemButton>
