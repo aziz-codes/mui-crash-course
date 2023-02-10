@@ -23,7 +23,7 @@ const Sidebar = ({ mode, setMode }) => {
     <Box
       flex={1}
       flexShrink="unset"
-      maxWidth="350px"
+      maxWidth="320px"
       p={2}
       sx={{ display: { xs: "none", sm: "block" } }}
     >
