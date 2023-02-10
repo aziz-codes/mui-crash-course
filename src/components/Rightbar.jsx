@@ -9,6 +9,7 @@ import {
   ListItemAvatar,
   ImageList,
   ImageListItem,
+  Divider,
 } from "@mui/material";
 import React from "react";
 
@@ -113,6 +114,7 @@ const Rightbar = () => {
               }
             />
           </ListItem>
+          <Divider variant="fullWidth" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar
@@ -137,6 +139,7 @@ const Rightbar = () => {
               }
             />
           </ListItem>
+          <Divider variant="fullWidth" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar
@@ -161,6 +164,7 @@ const Rightbar = () => {
               }
             />
           </ListItem>
+          <Divider variant="fullWidth" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar
@@ -185,6 +189,7 @@ const Rightbar = () => {
               }
             />
           </ListItem>
+          <Divider variant="fullWidth" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar
@@ -209,6 +214,7 @@ const Rightbar = () => {
               }
             />
           </ListItem>
+          <Divider variant="fullWidth" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
@@ -230,6 +236,7 @@ const Rightbar = () => {
               }
             />
           </ListItem>
+          <Divider variant="fullWidth" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar
@@ -254,6 +261,7 @@ const Rightbar = () => {
               }
             />
           </ListItem>
+          <Divider variant="fullWidth" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar
